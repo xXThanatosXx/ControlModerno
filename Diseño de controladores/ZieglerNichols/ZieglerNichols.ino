@@ -4,7 +4,7 @@ const int PWM_OUTPUT_PIN = 6;
 const float ALPHA = 0.01;  // EMA smoothing factor
 const int SAMPLE_TIME_MS = 35;  // Sampling time in ms
 
-float ts = 0.35; // ts = SAMPLE_TIME_MS / 1000
+float ts = 0.35; // ts = SAMPLE_TIME_MS / 100
 float currentOutput = 0.0;
 float controlEffort = 0.0;
 float setPoint = 0.0;
@@ -13,12 +13,12 @@ int PWMValue = 0;
 
 float currentError = 0.0;
 float previousError = 0.0;
-float Kp, Ki, Kd; // PID parameters
+float Kc, ti, td; // PID parameters
 
 // Ziegler-Nichols Tuning Parameters
-float Ku = 3.1836; // Replace with experimentally found value
-float Tu =  0.50912;  // Replace with experimentally found value
-float theta = 0.0177;
+float Kp = 3.1804; // Remplazar con los valores de identificación
+float Tau =  0.50713;  // Remplazar con los valores de identificación
+float theta = 0.0182;
 unsigned long lastUpdateTime = 0;
 float previousError1 = 0.0;
 float previousError2 = 0.0;
@@ -31,12 +31,12 @@ void setup() {
   Serial.begin(9600);
   pinMode(PWM_OUTPUT_PIN, OUTPUT);
 
-  // Calculate PID parameters using Ziegler-Nichols tuning
+  // Parametros PID con Ziegler-Nichols 
 
   L = theta + ts/2;
-  Kp = (1.2*Tu)/(Ku*L);
-  Ki = 2*L;
-  Kd = 0.5*L;
+  Kc = (1.2*Tau)/(Kp*L);
+  ti = 2*L;
+  td = 0.5*L;
 }
 
 void loop() {
@@ -77,9 +77,9 @@ void CalculatePID() {
   currentError = setPoint - filteredOutput;
 
   // Calcula los coeficientes del PID discreto
-  float q0 = Kp * (1 + SAMPLE_TIME_MS / (2 * Ki) + Kd / SAMPLE_TIME_MS);
-  float q1 = -Kp * (1 - SAMPLE_TIME_MS / (2 * Ki) + (2 * Kd) / SAMPLE_TIME_MS);
-  float q2 = (Kp * Kd) / SAMPLE_TIME_MS;
+  float q0 = Kc * (1 + SAMPLE_TIME_MS / (2 * ti) + td / SAMPLE_TIME_MS);
+  float q1 = -Kc * (1 - SAMPLE_TIME_MS / (2 * ti) + (2 * td) / SAMPLE_TIME_MS);
+  float q2 = (Kc * td) / SAMPLE_TIME_MS;
 
   // Calcula el esfuerzo de control según la fórmula discreta de PID
   controlEffort = controlEffort + q0 * currentError + q1 * previousError + q2 * previousError1;

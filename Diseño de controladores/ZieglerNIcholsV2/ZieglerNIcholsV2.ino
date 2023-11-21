@@ -16,8 +16,8 @@ float previousError = 0.0;
 float Kp, Ki, Kd; // PID parameters
 
 // Ziegler-Nichols Tuning Parameters
-float Ku = 3.1836; // Replace with experimentally found value
-float Tu =  0.50912;  // Replace with experimentally found value
+float Ku =  3.1804; 
+float Tu =  0.50713;  
 
 unsigned long lastUpdateTime = 0;
 
