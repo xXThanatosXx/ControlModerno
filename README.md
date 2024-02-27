@@ -1,12 +1,12 @@
 
-<h1 align="center">Repositorio del Programa de Ingeniería Mecatrónica</h1>
+<h1 align="center">Repositorio del Curso de Control Moderno</h1>
 
 <p align="center">
 <img src="./Logos/Control.webp" height="300">
 </p>
 
 
-Este repositorio **almacena los formatos de trabajo de grado** para el programa de Ingeniería Mecatrónica, abarcando las categorías de *Idea*, *Propuesta*, y *Proyecto Final*.
+Este repositorio **almacena los Scripts en Matlab y C++** para el desarrollo del curso de control moderno, abarcando las categorías de *Ecuación en diferencias*, *identificación*, y *Diseño de controladores*.
 
 
 ## 📝 [📂](./EcuacionesDiferencias/)Ecuación en diferencias
@@ -20,10 +20,5 @@ Scripts para realizar el proceso de identificación de sistemas mediante curva d
 
 En esta sección se almacenan los Scripts requeridos para implementar un controlador PID y RST discreto en un sistema embebidola **elaboración y presentación de propuesta**
 
-Esta parte del repositorio contiene los formatos finales para la **presentación de proyectos de grado completados**.
-## Linea de investigación y áreas temáticas del programa: 
-<p align="center">
-<img src="./Logos/Linea.png" height="300">
-</p>
 
 
