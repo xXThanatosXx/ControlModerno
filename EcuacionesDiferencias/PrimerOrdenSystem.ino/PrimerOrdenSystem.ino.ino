@@ -38,7 +38,7 @@ void ProcessControl()
   //Planta de primer orden
   xk = ukm1*0.3938+xkm1*0.6063;//T=0.5 segundos 
   xkm1 = xk;
-  ukm1 = 10*u;
+  ukm1 = 1*u;
  
   Serial.print(u);
   Serial.print(", ");

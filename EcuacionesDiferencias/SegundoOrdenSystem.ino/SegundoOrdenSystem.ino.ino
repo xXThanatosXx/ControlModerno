@@ -45,7 +45,7 @@ void ProcessControl()
     xkm2=xkm1; 
   }
   xkm1=xk;
-  ukm1 = 10*u;
+  ukm1 = 1*u;
 
   i=+1;
   Serial.print(u);
