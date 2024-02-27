@@ -2,7 +2,7 @@
 <h1 align="center">Repositorio del Programa de Ingeniería Mecatrónica</h1>
 
 <p align="center">
-<img src="./Logos/logo.jpg" height="300">
+<img src="./Logos/Control.webp" height="300">
 </p>
 
 
