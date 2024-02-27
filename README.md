@@ -18,7 +18,7 @@ Scripts para realizar el proceso de identificación de sistemas mediante curva d
 
 ## 📝 [📂](./Diseño%20de%20controladores/) Diseño de controladores
 
-Scripts requeridos para implementar un controlador PID y RST discreto en un sistema embebidola **elaboración y presentación de propuesta**.
+Scripts requeridos para implementar un controlador PID y RST discreto en un sistema embebido.
 
 
 
