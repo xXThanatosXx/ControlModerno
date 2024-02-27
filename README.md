@@ -1,5 +1,5 @@
 
-<h1 align="center">Repositorio del Curso de Control Moderno</h1>
+<h1 align="center">Repositorio Curso de Control Moderno</h1>
 
 <p align="center">
 <img src="./Logos/Control.webp" height="300">
