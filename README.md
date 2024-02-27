@@ -13,10 +13,10 @@ El repositorio **almacena los Scripts en Matlab y C++** para el desarrollo del c
 
 Scripts para implementar sistemas de primer y segundo orden en un sistema embebido.
 
-## 🏆 [📂](./MatlabFilesIdentification/) Identificación
+## 📝 [📂](./MatlabFilesIdentification/) Identificación
 Scripts para realizar el proceso de identificación de sistemas mediante curva de reacción.
 
-## 📄 [📂](./Diseño%20de%20controladores/) Diseño de controladores
+## 📝 [📂](./Diseño%20de%20controladores/) Diseño de controladores
 
 Scripts requeridos para implementar un controlador PID y RST discreto en un sistema embebidola **elaboración y presentación de propuesta**.
 
